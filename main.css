@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #2B2C3A;
+}
+
+.wrapper {
+    display: flex;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+}
+
+.rightSideContent {
+    width: 80%;
+    margin-left: 20%;
+}
+
+/* leftBar */
+
+.leftbar { 
+    width: 20%; 
+    background: rgba(156, 165, 236, 0.039);
+    position: fixed;
+}
+
+/* group5 */
+
+.group5Container {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px groove#d8d8d813;
+}
+
+.group5 {
+    margin-left: 30px;
+    color: white;
+}
+
+.upperGroup5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.beelineIcons {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.group5Header {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* games */
+
+.gamesContainer {
+    height: 60vh;
+    border-bottom: 2px groove#d8d8d813;
+}
+
+.games {
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gamesItems {
+    color: white; 
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.gamesItemsSubMenu {
+    display: none;
+}
+
+.open {
+    display: block;
+    margin: 15px 0 15px 30px;
+}
+
+.gamesItemsLi {
+    list-style-type: none; 
+}
+
+.gamesItemsSubMenuLi {
+    list-style-type: none;
+    color: white;
+    font-weight: 300;
+    height: 30px;
+    transition: all 0.3s ease-out;
+}
+.gamesItemsIcons {
+    margin-right: 5%;
+    transition: color 0.3s ease-out;
+}
+
+.gamesItemsSubMenuLi:hover {
+    background-color: #FFFFFF03;
+}
+
+.gamesItemsSubMenuLi:hover .gamesItemsIcons {
+    color: #6B69F9;
+}
+
+
+/* switcher */
+
+.switcherContainer {
+    height: 25vh;
+}
+
+.switcher {
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.switcherText {
+    color: white;
+    opacity: 0.5;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.switch {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 25px;
+  }
+
+  .switch input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #FFFFFF;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 80%;
+    width: 40%;
+    left: 5%;
+    bottom: 10%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+    transition: .4s;
+  }
+  
+  input:checked + .slider::before {
+    background-color: #6F6EFF;
+    transform: translateX(130%);
+  }
+  
+  .slider.round {
+    border-radius: 15px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* topbar */
+
+.topbar {
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px groove#d8d8d813;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    font-weight: 300;
+    top: 0;
+}
+
+.topbarRightMenuContainer {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.leftMenu {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.leftMenuLinkBorder {
+    padding-right: 20px;
+    border-right: 2px solid#d8d8d813;
+}
+
+.leftMenuLink {
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.rightMenu {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rightMenuLink {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fa-bolt-lightning {
+    background-color: #FF4738;
+    padding: 4px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* accountInfo topbar */
+
+.accountInfo {
+    width: 30%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.accountInfoAvatar {
+    width: 25%;
+    height: auto;
+}
+
+.accountInfoNicknameStatus {
+    color:#24CB8D;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.fa-circle {
+    font-size: 10px;
+}
+
+.accountInfoStatus {
+    background-color: #6B69F9;
+    border-radius: 4px;
+    padding: 0 2px 0px;
+    font-size: 15px;
+}
+
+
+/* main */
+
+/* weeklyQuests */
+
+.weeklyQuests {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* weeklyQuestsTopbar */
+
+.weeklyQuestsTopbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.weeklyQuestsTopbarLevelText {
+    opacity: 0.4;
+}
+
+.weeklyQuestsTopbarPagination {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 12%;
+}
+
+.paginationArrow {
+    border: 1px solid #ffffff15;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.weeklyQuestsTopbarPaginationText {
+    background-color: #6B69F9;
+    font-weight: 300;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* weeklyQuestsCards */
+
+.weeklyQuestsCardsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weeklyQuestsCards {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    position: relative;
+}
+
+.weeklyQuestsCardsText { 
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    background-color: #6F6EFF;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0 5px 0 5px;
+}
+
+.weeklyQuestsCardsImg {
+    border-radius: 6px 6px 0 0;
+}
+
+.weeklyQuestsCardsAnnotation {
+    height: 12vh;
+    width: 100%;
+    border-bottom: 2px groove#d8d8d813;
+}
+
+.weeklyQuestsCardsAnnotationHeader {
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.weeklyQuestsCardsAnnotationText {
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.weeklyQuestsCardsDate {
+    width: 90%;
+    height: 8vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weeklyQuestsCardsDateText {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.weeklyQuestsCardsDateButton {
+    width: 30%;
+    height: 40%;
+    color: white;
+    background: linear-gradient(90deg, #6B69F9 0%, #6F6EFF 100%);
+    border-radius: 4px;
+}
+
